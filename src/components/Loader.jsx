@@ -9,7 +9,7 @@ const Loader = () => {
         <p 
           style={{
             fontSize: 14,
-            color: '#999999',
+            color: '#ffffff',
             marginTop: 0,
           }}
         >[{progress.toFixed(2)}%]</p>

@@ -4,7 +4,13 @@ import {
   DisPubCanvas,
   CtqCanvas,
   DvomiCanvas,
-  PapacetamolCanvas
+  PapacetamolCanvas,
+  SachaCanvas,
+  BhcCanvas,
+  FluxCanvas,
+  HarvardCanvas,
+  ExperimentsCanvas,
+  IcchaCanvas,
 } from "./Work";
 
 import About from "./About";
@@ -19,4 +25,10 @@ export {
   CtqCanvas,
   DvomiCanvas,
   PapacetamolCanvas,
+  SachaCanvas,
+  BhcCanvas,
+  FluxCanvas,
+  HarvardCanvas,
+  ExperimentsCanvas,
+  IcchaCanvas,
 };
