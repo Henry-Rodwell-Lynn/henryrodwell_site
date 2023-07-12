@@ -57,7 +57,7 @@ const DisPubCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <ambientLight intensity={0.2} />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         <DisPub />
       </Suspense>
       <Preload all />

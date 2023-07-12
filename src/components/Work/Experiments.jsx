@@ -57,7 +57,7 @@ const ExperimentsCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <ambientLight intensity={0.2} />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         <Experiments />
       </Suspense>
       <Preload all />

@@ -57,7 +57,7 @@ const DvomiCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <ambientLight intensity={0.2} />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         <Dvomi />
       </Suspense>
       <Preload all />
