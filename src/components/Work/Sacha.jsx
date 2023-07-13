@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Sacha = () => {
-  const sacha = useGLTF("./logo-test/sp-test2.glb");
+  const sacha = useGLTF("./logo-test/untitled6.glb");
   const meshRef = useRef();
 
   useFrame(() => {

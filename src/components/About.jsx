@@ -2,16 +2,35 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-12 gap4 text-white justify-evenly m-5 place-content-evenly">
-      <div className="col-span-6">
+    <div className="grid grid-cols-12 gap4 text-black justify-evenly m-5 place-content-evenly text-sm">
+      <div className="col-span-5">
         <p
           style={{
             fontWeight: 600,
           }}
         >
-          Hey:
+          Henry Rodwell:
         </p>
-        <p className="mt-2.5 mr-10">Mauris ut dui in nisi condimentum euismod sit amet ac leo. Curabitur euismod bibendum quam, et interdum velit vehicula at. Etiam tristique a lectus a fermentum. Duis egestas porta sem, eget euismod tellus pharetra vel. Morbi at consectetur dolor. Aenean bibendum viverra pulvinar. Nunc eget dolor vitae erat commodo hendrerit. Nunc tempor rutrum dolor.</p>
+        <p className="mt-2.5 mr-10">
+          Is a graduate designer from Kingston University. He is someone who;
+          thinks design is (and should be) fun, relishes learning new skills,
+          loves solving problems and enjoys working with emerging and exciting
+          technologies. <br></br> His work is current and focuses on evoking
+          intrigue into the ever changing world around us, by coupling digital
+          and emerging practices with tried and tested traditional design
+          techniques. <br></br>Henry aims to solve mundane problems through
+          unconventional, fun and engaging design.
+        </p>
+      </div>
+      <div className="col-span-1">
+        <ul
+          className=" justify-between"
+          style={{
+            fontWeight: 600,
+          }}
+        >
+          <p>> Showreel</p>
+        </ul>
       </div>
 
       <div className="">
@@ -44,6 +63,7 @@ const About = () => {
           <li>ICCHA</li>
         </ol>
       </div>
+
       <div>
         <p
           style={{
@@ -59,14 +79,87 @@ const About = () => {
           <li>Tick Tock..</li>
         </ol>
       </div>
-      <div>
-      <p
+
+      <div className="col-span-1">
+        <ul
+          className=" justify-between"
+          style={{
+            fontWeight: 600,
+          }}
+        >
+          <p>> Aditional Info</p>
+        </ul>
+      </div>
+
+      <div className="col-span-1"></div>
+      <div className="col-span-1">
+        <p
           style={{
             fontWeight: 600,
           }}
         >
           Contact:
         </p>
+        <ul className=" list-inside list-decimal mt-2.5 list-none">
+          <li className="flex items-center">
+            <svg
+              className="mr-1"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            </svg>
+            <a>Email</a>
+          </li>
+          <li className="flex items-center">
+            <svg
+              className="mr-1"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            </svg>
+            <a href="https://www.instagram.com/henryrodwelllynn/"> Instagram</a>
+          </li>
+          <li className="flex items-center">
+            <svg
+              className="mr-1"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            </svg>
+            <a href="https://www.linkedin.com/in/henry-rodwell-lynn-80687a23b/">
+              LinkedIn
+            </a>
+          </li>
+          <li className="flex items-center">
+            <svg
+              className="mr-1"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            </svg>
+            <a href="https://www.are.na/henry-rodwell-lynn">Are.na</a>
+          </li>
+        </ul>
       </div>
     </div>
   );

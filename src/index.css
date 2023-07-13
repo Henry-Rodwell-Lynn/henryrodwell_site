@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    line-height: 120%;
+}
+
+canvas {
+    border-radius: 1rem;
+}
+
+li::marker{
+    background-size: 1rem;
+ }

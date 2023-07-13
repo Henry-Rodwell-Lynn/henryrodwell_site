@@ -6,13 +6,13 @@ import { useSpring, animated, config } from "@react-spring/three";
 import CanvasLoader from "../Loader";
 
 const Ctq = () => {
-  const ctq = useGLTF("./logo-test/3D2.glb");
+  const ctq = useGLTF("./logo-test/sp-test2.glb");
   const meshRef = useRef();
   const [active, setActive] = useState(false);
 
   const { scale } = useSpring({
-    scale: active ? 1.5 : 1,
-    config: config.molasses,
+    scale: active ? 1.2 : 1,
+    config: config.default,
   });
   useFrame((  ) => {
     meshRef.current.rotation.y += 0.005;
@@ -59,9 +59,9 @@ const Ctq = () => {
       <primitive
         ref={meshRef}
         object={ctq.scene}
-        scale={0.7}
-        position={[0, -30, 0]}
-        rotation={[100, 0, 0]}
+        scale={2}
+        position={[0, 0, 0]}
+        rotation={[0, 0, 0]}
       />
     </animated.mesh>
   );
@@ -72,7 +72,7 @@ const CtqCanvas = () => {
     <Canvas
       frameLoop="demand"
       shadows
-      camera={{ position: [500, 0, 0], fov: 12.5 }}
+      camera={{ position: [50, 0, 0], fov: 12.5 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

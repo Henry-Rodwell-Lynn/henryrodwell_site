@@ -4,7 +4,7 @@ import { About, Grid } from './components';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-[#000000] text-white flex flex-col min-h-screen">
+      <div className="relative z-0 bg-[#ffffff] text-black flex flex-col min-h-screen">
         <div className="flex-1">
           <Grid />
         </div>

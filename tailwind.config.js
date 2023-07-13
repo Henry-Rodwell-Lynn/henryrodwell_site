@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      listStyleImage: {
+        arrow: 'url("./public/svg/arrow.svg")'
+      },
+    },
   },
   plugins: [],
 }
