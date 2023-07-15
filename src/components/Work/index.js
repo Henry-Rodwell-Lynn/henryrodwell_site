@@ -11,6 +11,10 @@ import HarvardCanvas from "./Harvard";
 import ExperimentsCanvas from "./Experiments";
 import IcchaCanvas from "./Iccha";
 
+import {
+  Stopple3D,
+} from './3D_Models';
+
 export {
   StoppleCanvas,
   TickTockCanvas,
@@ -24,4 +28,5 @@ export {
   HarvardCanvas,
   ExperimentsCanvas,
   IcchaCanvas,
+  Stopple3D,
 };

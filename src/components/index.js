@@ -13,6 +13,10 @@ import {
   IcchaCanvas,
 } from "./Work";
 
+import {
+  Stopple3D
+} from './Work/3D_Models';
+
 import About from "./About";
 import Grid from "./Grid";
 
@@ -31,4 +35,5 @@ export {
   HarvardCanvas,
   ExperimentsCanvas,
   IcchaCanvas,
+  Stopple3D,
 };

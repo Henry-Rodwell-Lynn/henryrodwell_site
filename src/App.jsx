@@ -8,7 +8,7 @@ const App = () => {
         <div className="flex-1">
           <Grid />
         </div>
-        <div className="mt-auto">
+        <div className="">
           <About />
         </div>
       </div>

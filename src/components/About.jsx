@@ -9,7 +9,7 @@ const About = () => {
             fontWeight: 600,
           }}
         >
-          Henry Rodwell:
+          HENRY RODWELL:
         </p>
         <p className="mt-2.5 mr-10">
           Is a graduate designer from Kingston University. He is someone who;
@@ -29,7 +29,8 @@ const About = () => {
             fontWeight: 600,
           }}
         >
-          <p>> Showreel</p>
+          <p>> SHOWREEL</p>
+          <p>> TOOLS</p>
         </ul>
       </div>
 
@@ -39,7 +40,7 @@ const About = () => {
             fontWeight: 600,
           }}
         >
-          Projects:
+          PROJECTS:
         </p>
         <ol className=" list-inside list-decimal mt-2.5">
           <li>BHC</li>
@@ -63,7 +64,7 @@ const About = () => {
           <li>ICCHA</li>
         </ol>
       </div>
-
+      
       <div>
         <p
           style={{
@@ -87,7 +88,8 @@ const About = () => {
             fontWeight: 600,
           }}
         >
-          <p>> Aditional Info</p>
+          <p>> ADITIONAL INFO</p>
+          
         </ul>
       </div>
 
@@ -98,7 +100,7 @@ const About = () => {
             fontWeight: 600,
           }}
         >
-          Contact:
+          CONTACT:
         </p>
         <ul className=" list-inside list-decimal mt-2.5 list-none">
           <li className="flex items-center">
@@ -145,7 +147,7 @@ const About = () => {
               LinkedIn
             </a>
           </li>
-          <li className="flex items-center">
+          {/* <li className="flex items-center">
             <svg
               className="mr-1"
               width="12"
@@ -159,6 +161,20 @@ const About = () => {
             </svg>
             <a href="https://www.are.na/henry-rodwell-lynn">Are.na</a>
           </li>
+          <li className="flex items-center">
+            <svg
+              className="mr-1"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+            </svg>
+            <a href="https://www.are.na/henry-rodwell-lynn">Github</a>
+          </li> */}
         </ul>
       </div>
     </div>
