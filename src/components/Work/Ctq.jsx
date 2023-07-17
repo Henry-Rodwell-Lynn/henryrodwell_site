@@ -14,6 +14,7 @@ const Ctq = () => {
     scale: active ? 1.2 : 1,
     config: config.default,
   });
+  
   useFrame((  ) => {
     meshRef.current.rotation.y += 0.005;
   });

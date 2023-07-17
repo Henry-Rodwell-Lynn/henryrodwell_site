@@ -13,6 +13,7 @@ import IcchaCanvas from "./Iccha";
 
 import {
   Stopple3D,
+  TickTock3D,
 } from './3D_Models';
 
 export {
@@ -29,4 +30,5 @@ export {
   ExperimentsCanvas,
   IcchaCanvas,
   Stopple3D,
+  TickTock3D,
 };

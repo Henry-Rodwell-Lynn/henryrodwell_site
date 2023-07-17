@@ -18,6 +18,7 @@ const StoppleCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <ambientLight />
         <OrbitControls 
+          enablePan={false}
           enableZoom={false}
           autoRotate
          />

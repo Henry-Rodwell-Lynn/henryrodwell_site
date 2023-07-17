@@ -50,7 +50,7 @@ const Stopple3D = (props) => {
           castShadow
           receiveShadow
           geometry={nodes.LID_A.geometry}
-          material={materials["Material.002"]}
+          material={materials["Black Plastic"]}
           scale={0.08}
         />
         <mesh
@@ -58,7 +58,7 @@ const Stopple3D = (props) => {
           castShadow
           receiveShadow
           geometry={nodes.LID_B.geometry}
-          material={materials["Material.002"]}
+          material={materials["Black Plastic"]}
           scale={0.08}
         />
       </group>
