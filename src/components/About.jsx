@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-12 gap4 text-black justify-evenly m-5 place-content-evenly text-sm">
+    <div className="grid grid-cols-12 gap4 text-black justify-evenly m-5 place-content-evenly text-sm bg-white">
       <div className="col-span-5">
         <p
           style={{
