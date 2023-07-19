@@ -17,7 +17,7 @@ import {
 
 const Grid = () => {
   return (
-    <div className="grid grid-cols-4 gap4 text-black justify-items-center m-5 h-[75vh] text-sm">
+    <div className="grid grid-cols-4 gap4 text-black justify-items-center m-5 h-[75vh]">
       <div className="w-full h-[calc(25vh-2.5rem)]">
         <div className="justify-self-center w-[25vw] h-full">
           <StoppleCanvas />

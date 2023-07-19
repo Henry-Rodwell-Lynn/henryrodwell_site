@@ -13,5 +13,5 @@ canvas {
 ul li:before
 {
     content: '→';
-    margin: 0 1em;   
+    margin-right: 0.4em;   
 }

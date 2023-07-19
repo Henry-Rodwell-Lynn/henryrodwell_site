@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-12 gap4 text-black justify-evenly m-5 place-content-evenly bg-white">
-      <div className="col-span-5">
+    <div className="md:grid md:grid-cols-12 md:gap4 text-black md:justify-evenly md:m-5 md:place-content-evenly md:bg-white md:text-smal">
+      <div className="md:col-span-3">
         <p
           style={{
             fontWeight: 600,
@@ -11,7 +11,10 @@ const About = () => {
         >
           HENRY RODWELL:
         </p>
-        <p className="2xl:mt-2.5 2xl:mr-10">
+        <ul className="md:mt-5 md:mr-10">
+          <li>More info</li>
+        </ul>
+        <p className="mt-5 mr-10 md:hidden">
           Is a graduate designer from Kingston University. He is someone who;
           thinks design is (and should be) fun, relishes learning new skills,
           loves solving problems and enjoys working with emerging and exciting
@@ -22,79 +25,58 @@ const About = () => {
           unconventional, fun and engaging design.
         </p>
       </div>
-      <div className="2xl:col-span-1 ">
+      <div className="md:hidden">
         <ul
-          className="hidden xl:justify-between xl:grid"
+          className="justify-between grid"
           style={{
             fontWeight: 600,
           }}
         >
-          <p>> SHOWREEL</p>
-          <p>> TOOLS</p>
+          <p>SHOWREEL</p>
+          <p>TOOLS</p>
         </ul>
       </div>
 
-      <div className="">
-        <p
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          PROJECTS:
-        </p>
-        <ol className=" list-inside list-decimal mt-2.5">
-          <li>BHC</li>
-          <li>CTQ</li>
-          <li>Dissertation</li>
-          <li>DVOMI</li>
-        </ol>
-      </div>
-      <div>
-        <p
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          <br></br>
-        </p>
-        <ol start="5" className=" list-inside list-decimal mt-2.5">
-          <li>Experiments</li>
-          <li>Flux</li>
-          <li>Harvard D3</li>
-          <li>ICCHA</li>
-        </ol>
-      </div>
-      
-      <div>
-        <p
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          <br></br>
-        </p>
-        <ol start="9" className=" list-inside list-decimal mt-2.5 mr-10">
-          <li>Papacetamol</li>
-          <li>Sacha</li>
-          <li>Stopple</li>
-          <li>Tick Tock..</li>
-        </ol>
+      <div className="md:col-span-6 flex">
+        <div>
+          <p
+            style={{
+              fontWeight: 600,
+            }}
+          >
+            PROJECTS:
+          </p>
+          <ol className="list-inside list-decimal mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)]">
+            <li>BHC</li>
+            <li>CTQ</li>
+            <li>Dissertation</li>
+            <li>DVOMI</li>
+            <li>Experiments</li>
+            <li>Flux</li>
+            <li>Harvard D3</li>
+            <li>ICCHA</li>
+            <li>Papacetamol</li>
+            <li>Sacha</li>
+            <li>Stopple</li>
+            <li>Tick Tock..</li>
+          </ol>
+        </div>
       </div>
 
-      <div className="hidden xl:justify-between xl:grid">
+      <div className="md:hidden">
         <ul
-          className=" justify-between"
+          className="justify-between"
           style={{
             fontWeight: 600,
           }}
         >
           <p>ADITIONAL INFO</p>
-          
         </ul>
       </div>
 
-      <div className="col-span-1"></div>
-      <div className="col-span-1">
+      <div className="md:hidden"></div>
+
+      <div className="md:col-span-1">
         <p
           style={{
             fontWeight: 600,
@@ -102,7 +84,7 @@ const About = () => {
         >
           CONTACT:
         </p>
-        <ul className=" list-inside list-decimal mt-2.5 list-none">
+        <ul className="mt-5 list-none">
           <li className="flex items-center">
             <a>Email</a>
           </li>
@@ -114,34 +96,6 @@ const About = () => {
               LinkedIn
             </a>
           </li>
-          {/* <li className="flex items-center">
-            <svg
-              className="mr-1"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-            </svg>
-            <a href="https://www.are.na/henry-rodwell-lynn">Are.na</a>
-          </li>
-          <li className="flex items-center">
-            <svg
-              className="mr-1"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-            </svg>
-            <a href="https://www.are.na/henry-rodwell-lynn">Github</a>
-          </li> */}
         </ul>
       </div>
     </div>
