@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="md:grid md:grid-cols-12 md:gap4 text-black md:justify-evenly md:m-5 md:place-content-evenly md:bg-white md:text-smal">
+    <div className="md:grid md:grid-cols-12 md:gap4 text-black md:justify-evenly m-5 md:place-content-evenly md:bg-white md:text-smal">
       <div className="md:col-span-3">
         <p
           style={{
@@ -11,10 +11,10 @@ const About = () => {
         >
           HENRY RODWELL:
         </p>
-        <ul className="md:mt-5 md:mr-10">
+        <ul className="m-2 md:mt-5 md:mr-10">
           <li>Website Design being done by me 🖲️</li>
         </ul>
-        <p className="mt-5 mr-10 md:hidden">
+        <p className="hidden mt-5 mr-10 md:hidden">
           Is a graduate designer from Kingston University. He is someone who;
           thinks design is (and should be) fun, relishes learning new skills,
           loves solving problems and enjoys working with emerging and exciting
@@ -25,7 +25,7 @@ const About = () => {
           unconventional, fun and engaging design.
         </p>
       </div>
-      <div className="md:hidden">
+      <div className="hidden md:hidden">
         <ul
           className="justify-between grid"
           style={{
@@ -37,7 +37,7 @@ const About = () => {
         </ul>
       </div>
 
-      <div className="md:col-span-6 flex">
+      <div className="hidden md:col-span-6 flex">
         <div>
           <p
             style={{
@@ -46,7 +46,7 @@ const About = () => {
           >
             PROJECTS:
           </p>
-          <ol className="list-inside list-decimal mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)]">
+          <ol className="columns-3 gap-[calc(25vw-7.5rem)] list-inside list-decimal mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)]">
             <li>BHC</li>
             <li>CTQ</li>
             <li>Dissertation</li>
@@ -63,7 +63,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="md:hidden">
+      <div className="hidden md:hidden">
         <ul
           className="justify-between"
           style={{
@@ -76,7 +76,7 @@ const About = () => {
 
       <div className="md:hidden"></div>
 
-      <div className="md:col-span-1">
+      <div className=" md:col-span-1">
         <p
           style={{
             fontWeight: 600,
@@ -84,7 +84,7 @@ const About = () => {
         >
           CONTACT:
         </p>
-        <ul className="mt-5 list-none">
+        <ul className="m-2 list-none">
           <li className="flex items-center">
             <a>Email</a>
           </li>
