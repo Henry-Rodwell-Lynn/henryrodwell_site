@@ -12,7 +12,7 @@ const About = () => {
           HENRY RODWELL:
         </p>
         <ul className="md:mt-5 md:mr-10">
-          <li>More info</li>
+          <li>Website Design being done by me 🖲️</li>
         </ul>
         <p className="mt-5 mr-10 md:hidden">
           Is a graduate designer from Kingston University. He is someone who;
