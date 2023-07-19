@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-12 gap4 text-black justify-evenly m-5 place-content-evenly text-sm bg-white">
+    <div className="grid grid-cols-12 gap4 text-black justify-evenly m-5 place-content-evenly bg-white">
       <div className="col-span-5">
         <p
           style={{
@@ -11,7 +11,7 @@ const About = () => {
         >
           HENRY RODWELL:
         </p>
-        <p className="mt-2.5 mr-10">
+        <p className="2xl:mt-2.5 2xl:mr-10">
           Is a graduate designer from Kingston University. He is someone who;
           thinks design is (and should be) fun, relishes learning new skills,
           loves solving problems and enjoys working with emerging and exciting
@@ -22,9 +22,9 @@ const About = () => {
           unconventional, fun and engaging design.
         </p>
       </div>
-      <div className="col-span-1">
+      <div className="2xl:col-span-1 ">
         <ul
-          className=" justify-between"
+          className="hidden xl:justify-between xl:grid"
           style={{
             fontWeight: 600,
           }}
@@ -81,14 +81,14 @@ const About = () => {
         </ol>
       </div>
 
-      <div className="col-span-1">
+      <div className="hidden xl:justify-between xl:grid">
         <ul
           className=" justify-between"
           style={{
             fontWeight: 600,
           }}
         >
-          <p>> ADITIONAL INFO</p>
+          <p>ADITIONAL INFO</p>
           
         </ul>
       </div>
@@ -104,45 +104,12 @@ const About = () => {
         </p>
         <ul className=" list-inside list-decimal mt-2.5 list-none">
           <li className="flex items-center">
-            <svg
-              className="mr-1"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-            </svg>
             <a>Email</a>
           </li>
           <li className="flex items-center">
-            <svg
-              className="mr-1"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-            </svg>
             <a href="https://www.instagram.com/henryrodwelllynn/"> Instagram</a>
           </li>
           <li className="flex items-center">
-            <svg
-              className="mr-1"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
-            </svg>
             <a href="https://www.linkedin.com/in/henry-rodwell-lynn-80687a23b/">
               LinkedIn
             </a>

@@ -17,9 +17,9 @@ import {
 
 const Grid = () => {
   return (
-    <div className="grid grid-cols-4 gap4 text-black justify-items-center m-5 w-full text-sm">
-      <div className="w-full h-auto grid">
-        <div className="w-[25vh] h-[25vh] justify-self-center">
+    <div className="grid grid-cols-4 gap4 text-black justify-items-center m-5 h-[75vh] text-sm">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <StoppleCanvas />
         </div>
         <p
@@ -30,8 +30,8 @@ const Grid = () => {
           1
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <TickTockCanvas />
         </div>
         <p
@@ -42,8 +42,8 @@ const Grid = () => {
           2
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="w-[25vh] h-[25vh] justify-self-center">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="w-[25vw] h-full justify-self-center">
           <DisPubCanvas />
         </div>
         <p
@@ -54,8 +54,8 @@ const Grid = () => {
           3
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <CtqCanvas />
         </div>
         <p
@@ -66,8 +66,8 @@ const Grid = () => {
           4
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <DvomiCanvas />
         </div>
         <p
@@ -78,8 +78,8 @@ const Grid = () => {
           5
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <PapacetamolCanvas />
         </div>
         <p
@@ -90,8 +90,8 @@ const Grid = () => {
           6
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <SachaCanvas />
         </div>
         <p
@@ -102,8 +102,8 @@ const Grid = () => {
           7
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <BhcCanvas />
         </div>
         <p
@@ -114,8 +114,8 @@ const Grid = () => {
           8
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <FluxCanvas />
         </div>
         <p
@@ -126,8 +126,8 @@ const Grid = () => {
           9
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <HarvardCanvas />
         </div>
         <p
@@ -138,8 +138,8 @@ const Grid = () => {
           10
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <ExperimentsCanvas />
         </div>
         <p
@@ -150,8 +150,8 @@ const Grid = () => {
           11
         </p>
       </div>
-      <div className="w-full h-auto grid">
-        <div className="justify-self-center w-[25vh] h-[25vh]">
+      <div className="w-full h-[calc(25vh-2.5rem)]">
+        <div className="justify-self-center w-[25vw] h-full">
           <IcchaCanvas />
         </div>
         <p

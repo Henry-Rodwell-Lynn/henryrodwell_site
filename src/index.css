@@ -9,3 +9,9 @@
 canvas {
     border-radius: 1rem;
 }
+
+ul li:before
+{
+    content: '→';
+    margin: 0 1em;   
+}

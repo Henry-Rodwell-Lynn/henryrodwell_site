@@ -1,5 +1,5 @@
 import { useRef, useMemo } from "react";
-import { useGLTF } from "@react-three/drei";
+import { MeshPortalMaterial, MeshWobbleMaterial, useGLTF } from "@react-three/drei";
 import { RedFormat, DataTexture } from "three";
 
 const TickTock3D = (props) => {
