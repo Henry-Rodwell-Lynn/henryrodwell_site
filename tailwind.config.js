@@ -2,14 +2,22 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      'test1': ['monument']
+    },
     extend: {
       animation: {
-        rightToLeft: 'rightToLeft 10s infinite linear',
-        leftToRight: 'leftToRight 10s infinite linear',
+        rightToLeft: 'rightToLeft 20s infinite linear',
+        rightToLeftSlow: 'rightToLeftSlow 20s infinite linear',
+        leftToRight: 'leftToRight 20s infinite linear',
       }, 
       }, 
       keyframes: {
         rightToLeft: {
+          'from': {transform: 'translateX(0%)'},
+          'to': {transform: 'translateX(-25%)'},
+        },
+        rightToLeftSlow: {
           'from': {transform: 'translateX(0%)'},
           'to': {transform: 'translateX(-25%)'},
         },

@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 * {
-    line-height: 120%;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-style: ;
+  line-height: 120%;
 }
 
 canvas {
-    border-radius: 1rem;
+  border-radius: 1rem;
 }
 
-ul li:before
-{
-    content: '→';
-    margin-right: 0.4em;   
+ul li:before {
+  content: "→";
+  margin-right: 0.4em;
 }

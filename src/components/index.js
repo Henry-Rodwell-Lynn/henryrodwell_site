@@ -20,6 +20,7 @@ import {
 
 import About from "./About";
 import Grid from "./Grid";
+import Banner from "./banner";
 
 export {
   About,
@@ -38,4 +39,5 @@ export {
   IcchaCanvas,
   Stopple3D,
   TickTock3D,
+  Banner
 };

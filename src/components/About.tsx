@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="md:grid md:grid-cols-12 md:gap4 text-black md:justify-evenly md:m-5 md:place-content-evenly md:bg-white md:text-smal">
-      <div className="md:col-span-3">
+    <div className="m-5 text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly">
+      <div className="md:col-span-3 lg:col-span-5">
         <p
           style={{
             fontWeight: 600,
@@ -11,33 +11,35 @@ const About = () => {
         >
           HENRY RODWELL:
         </p>
-        <ul className="md:mt-5 md:mr-10">
-          <li>Website Design being done by me 🖲️</li>
-        </ul>
-        <p className="hidden mt-5 mr-10 md:hidden">
+        <p className="m-2 md:mt-5 md:m-0 md:mr-10 lg:hidden">
+          Website Design being done by me 🖲️
+        </p>
+        <p className="hidden mt-5 mr-10 lg:block">
           Is a graduate designer from Kingston University. He is someone who;
           thinks design is (and should be) fun, relishes learning new skills,
           loves solving problems and enjoys working with emerging and exciting
-          technologies. <br></br> His work is current and focuses on evoking
-          intrigue into the ever changing world around us, by coupling digital
-          and emerging practices with tried and tested traditional design
-          techniques. <br></br>Henry aims to solve mundane problems through
-          unconventional, fun and engaging design.
+          technologies. His work is current and focuses on evoking intrigue into
+          the ever changing world around us, by coupling digital and emerging
+          practices with tried and tested traditional design techniques.{" "}
+          <br></br>Henry aims to solve mundane problems through unconventional,
+          fun and engaging design.
         </p>
       </div>
-      <div className="md:hidden">
-        <ul
-          className="justify-between grid"
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          <p>SHOWREEL</p>
-          <p>TOOLS</p>
+      <div className="hidden lg:block">
+      <p
+            style={{
+              fontWeight: 600,
+            }}
+          >
+            DESIGN:
+          </p>
+        <ul className="justify-between grid mt-5">
+          <li>Showreel</li>
+          <li>Tools</li>
         </ul>
       </div>
 
-      <div className="md:col-span-6 flex">
+      <div className="hidden md:col-span-6 md:flex lg:col-span-3">
         <div>
           <p
             style={{
@@ -46,7 +48,7 @@ const About = () => {
           >
             PROJECTS:
           </p>
-          <ol className="list-inside list-decimal mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)]">
+          <ol className="md:list-inside md:list-decimal md:mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)] lg:columns-3 lg:gap-5">
             <li>BHC</li>
             <li>CTQ</li>
             <li>Dissertation</li>
@@ -63,7 +65,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="md:hidden">
+      <div className="hidden lg:block lg:col-span-2">
         <ul
           className="justify-between"
           style={{
@@ -84,7 +86,7 @@ const About = () => {
         >
           CONTACT:
         </p>
-        <ul className="mt-5 list-none">
+        <ul className="m-2 list-none md:mt-5 m-0">
           <li className="flex items-center">
             <a>Email</a>
           </li>
