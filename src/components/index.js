@@ -20,7 +20,7 @@ import {
 
 import About from "./About";
 import Grid from "./Grid";
-import Banner from "./banner";
+import Banner from "./Banner";
 
 export {
   About,
