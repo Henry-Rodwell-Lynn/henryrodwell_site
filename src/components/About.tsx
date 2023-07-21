@@ -82,8 +82,8 @@ const About = () => {
         >
           ADITIONAL INFO:
         </p>
-        <ul>
-          <p>Website Design being done by me 🖲️</p>
+        <ul className="mt-5">
+          <p>This site is currently a WIP</p>
         </ul>
       </div>
 

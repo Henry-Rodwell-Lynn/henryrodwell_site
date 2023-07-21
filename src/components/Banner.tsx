@@ -9,7 +9,7 @@ const Banner = () => {
             <p className=""
               style={{
                 fontWeight: 600,
-                fontSize: 23,
+                fontSize: 30,
               }}
             >
               🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
@@ -19,7 +19,7 @@ const Banner = () => {
             <p
               style={{
                 fontWeight: 600,
-                fontSize: 23,
+                fontSize: 30,
               }}
             >
               🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
@@ -30,13 +30,13 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="fixed flex z-[-50] -rotate-12 top-24 select-none">
+      <div className="fixed flex z-[-50] -rotate-12 top-24 select-none -translate-x-20">
         <div className="whitespace-nowrap ml-1 mr-1">
           <div className="flex gap-4 animate-leftToRight bg-[#2ca707] p-2 border-4 border-black border-l-0 shadow-lg">
             <p
               style={{
                 fontWeight: 600,
-                fontSize: 22,
+                fontSize: 28,
               }}
             >
               🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
@@ -46,7 +46,7 @@ const Banner = () => {
             <p
               style={{
                 fontWeight: 600,
-                fontSize: 22,
+                fontSize: 28,
               }}
             >
               🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
@@ -63,7 +63,7 @@ const Banner = () => {
             <p
               style={{
                 fontWeight: 600,
-                fontSize: 23,
+                fontSize: 30,
               }}
             >
               🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
@@ -73,7 +73,7 @@ const Banner = () => {
             <p
               style={{
                 fontWeight: 600,
-                fontSize: 23,
+                fontSize: 30,
               }}
             >
               🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
