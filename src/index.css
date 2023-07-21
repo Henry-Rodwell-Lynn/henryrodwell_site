@@ -16,3 +16,12 @@ ul li:before {
   content: "→";
   margin-right: 0.4em;
 }
+
+.fade-effect {
+  transition: opacity 1s ease;
+}
+
+.fade-effect.fade-out {
+  opacity: 0;
+}
+

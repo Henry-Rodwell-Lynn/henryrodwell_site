@@ -57,7 +57,7 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className="fixed flex z-50 rotate-6 bottom-5 shadow-lg select-none">
+      <div className="fixed flex z-50 rotate-6 bottom-5 shadow-lg select-none -translate-x-10">
         <div className="whitespace-nowrap ml-1 mr-1">
           <div className="flex gap-2 animate-rightToLeft bg-[#04c12a] p-2 border-4 border-black border-l-0 shadow-lg">
             <p

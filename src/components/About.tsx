@@ -1,6 +1,16 @@
 import React from "react";
+import { useState } from "react";
+
 
 const About = () => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("henrywprodwell@gmail.com");
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 3000); 
+  };
+
   return (
     <div className="m-5 text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly">
       <div className="md:col-span-3 lg:col-span-5">
@@ -28,9 +38,8 @@ const About = () => {
               fontStyle: "oblique",
             }}
           >
-            ➡️ Website Design by Henry Rodwell-Lynn           🖲️
+            ➡️ Website Design by Henry Rodwell-Lynn 🖲️
           </p>
-
         </p>
       </div>
       <div className="hidden lg:block">
@@ -58,6 +67,7 @@ const About = () => {
             PROJECTS:
           </p>
           <ol className="md:list-inside md:list-decimal md:mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)] lg:columns-3 lg:gap-5">
+            <li>Stopple</li>
             <li>BHC</li>
             <li>CTQ</li>
             <li>Dissertation</li>
@@ -68,7 +78,6 @@ const About = () => {
             <li>ICCHA</li>
             <li>Papacetamol</li>
             <li>Sacha</li>
-            <li>Stopple</li>
             <li>Tick Tock..</li>
           </ol>
         </div>
@@ -90,26 +99,43 @@ const About = () => {
       <div className="md:hidden"></div>
 
       <div className="md:col-span-1">
-        <p
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          CONTACT:
-        </p>
+        <p style={{ fontWeight: 600 }}>CONTACT:</p>
         <ul className="m-2 list-none md:mt-5 m-0">
           <li className="flex items-center">
-            <a>Email</a>
+            <button className="hover:underline" onClick={handleCopyEmail}>
+              Email
+            </button>
           </li>
           <li className="flex items-center">
-            <a href="https://www.instagram.com/henryrodwelllynn/"> Instagram</a>
+            <a
+              href="https://www.instagram.com/henryrodwelllynn/"
+              target="_blank"
+              className="hover:underline"
+            >
+              Instagram
+            </a>
           </li>
           <li className="flex items-center">
-            <a href="https://www.linkedin.com/in/henry-rodwell-lynn-80687a23b/">
+            <a
+              href="https://www.linkedin.com/in/henry-rodwell-lynn-80687a23b/"
+              target="_blank"
+              className="hover:underline"
+            >
               LinkedIn
             </a>
           </li>
         </ul>
+        {isCopied && (
+          <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap animate-email">
+            <p
+              className="text-center text-7xl" style={{
+                fontWeight: 600
+              }}
+            >
+              EMAIL COPPIED TO CLIPBOARD 📧 EMAIL COPPIED TO CLIPBOARD 📧 EMAIL COPPIED TO CLIPBOARD 📧
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
