@@ -20,22 +20,31 @@ const About = () => {
           loves solving problems and enjoys working with emerging and exciting
           technologies. His work is current and focuses on evoking intrigue into
           the ever changing world around us, by coupling digital and emerging
-          practices with tried and tested traditional design techniques.{" "}
+          practices with tried and tested traditional design techniques.
           <br></br>Henry aims to solve mundane problems through unconventional,
           fun and engaging design.
+          <p
+            style={{
+              fontStyle: "oblique",
+            }}
+          >
+            ➡️ Website Design by Henry Rodwell-Lynn           🖲️
+          </p>
+
         </p>
       </div>
       <div className="hidden lg:block">
-      <p
-            style={{
-              fontWeight: 600,
-            }}
-          >
-            DESIGN:
-          </p>
+        <p
+          style={{
+            fontWeight: 600,
+          }}
+        >
+          DESIGN:
+        </p>
         <ul className="justify-between grid mt-5">
           <li>Showreel</li>
           <li>Tools</li>
+          <li>Sites</li>
         </ul>
       </div>
 
@@ -66,13 +75,15 @@ const About = () => {
       </div>
 
       <div className="hidden lg:block lg:col-span-2">
-        <ul
-          className="justify-between"
+        <p
           style={{
             fontWeight: 600,
           }}
         >
-          <p>ADITIONAL INFO</p>
+          ADITIONAL INFO:
+        </p>
+        <ul>
+          <p>Website Design being done by me 🖲️</p>
         </ul>
       </div>
 
