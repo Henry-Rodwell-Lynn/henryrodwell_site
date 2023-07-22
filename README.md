@@ -1,6 +1,6 @@
-# My Website （￣︶￣）↗　🗯️
+# My Website （￣︶￣）
 
-### [Click Me to see](https://henryrodwell.com/)
+### [Link to site](https://henryrodwell.com/)
 
 ### Still a lot of work to be done, so please let me know if any improvements can be made.
 
