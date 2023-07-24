@@ -12,8 +12,8 @@ const About = () => {
   };
 
   return (
-    <div className="m-5 text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly">
-      <div className="md:col-span-3 lg:col-span-5">
+    <div className="m-5 text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly h-[calc(25vh)]">
+      <div className="md:col-span-3 xl:col-span-5">
         <p
           style={{
             fontWeight: 600,
@@ -21,17 +21,16 @@ const About = () => {
         >
           HENRY RODWELL:
         </p>
-        <p className="m-2 md:mt-5 md:m-0 md:mr-10 lg:hidden">
+        <p className="m-2 md:mt-5 md:m-0 md:mr-10 xl:hidden">
           Website Design being done by me 🖲️
         </p>
-        <p className="hidden mt-5 mr-10 lg:block">
+        <p className="hidden mt-5 mr-10 xl:block">
           Is a graduate designer from Kingston University. He is someone who;
           thinks design is (and should be) fun, relishes learning new skills,
           loves solving problems and enjoys working with emerging and exciting
           technologies. His work is current and focuses on evoking intrigue into
           the ever changing world around us, by coupling digital and emerging
-          practices with tried and tested traditional design techniques.
-          <br></br>Henry aims to solve mundane problems through unconventional,
+          practices with tried and tested traditional design techniques. Henry aims to solve mundane problems through unconventional,
           fun and engaging design.
           <p
             style={{
@@ -42,7 +41,7 @@ const About = () => {
           </p>
         </p>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden xl:block">
         <p
           style={{
             fontWeight: 600,
@@ -57,7 +56,7 @@ const About = () => {
         </ul>
       </div>
 
-      <div className="hidden md:col-span-6 md:flex lg:col-span-3">
+      <div className="hidden md:col-span-6 md:flex xl:col-span-3">
         <div>
           <p
             style={{
@@ -66,7 +65,7 @@ const About = () => {
           >
             PROJECTS:
           </p>
-          <ol className="md:list-inside md:list-decimal md:mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)] lg:columns-3 lg:gap-5">
+          <ol className="md:list-inside md:list-decimal md:mt-5 md:columns-2 md:gap-[calc(25vw-7.5rem)] xl:columns-3 xl:gap-5">
             <li>Stopple</li>
             <li>BHC</li>
             <li>CTQ</li>
@@ -83,7 +82,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block lg:col-span-2">
+      <div className="hidden xl:block xl:col-span-2">
         <p
           style={{
             fontWeight: 600,
