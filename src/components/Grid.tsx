@@ -19,10 +19,6 @@ const Grid = () => {
   return (
     <div className="grid grid-cols-4 gap4 text-black justify-items-center m-5 h-[calc(75vh-5rem)] select-none">
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <StoppleCanvas />
-        </div>
-        <div>
         <p
           style={{
             fontWeight: 600,
@@ -30,24 +26,19 @@ const Grid = () => {
         >
           1
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <StoppleCanvas />
         </div>
+        <div></div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
+        <p style={{ fontWeight: 600 }}>2</p>
         <div className="justify-self-center w-[25vw] h-full">
           <TickTockCanvas />
         </div>
-        <p
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          2
-        </p>
       </div>
-      <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="w-[25vw] h-full justify-self-center">
-          <DisPubCanvas />
-        </div>
+
+      <div className="w-full h-[calc(25vh-3.75rem)] items-center">
         <p
           style={{
             fontWeight: 600,
@@ -55,11 +46,11 @@ const Grid = () => {
         >
           3
         </p>
+        <div className="w-[25vw] h-[calc(25vh-3.75rem)]">
+          <DisPubCanvas />
+        </div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <CtqCanvas />
-        </div>
         <p
           style={{
             fontWeight: 600,
@@ -67,11 +58,11 @@ const Grid = () => {
         >
           4
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <CtqCanvas />
+        </div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <DvomiCanvas />
-        </div>
         <p
           style={{
             fontWeight: 600,
@@ -79,11 +70,11 @@ const Grid = () => {
         >
           5
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <DvomiCanvas />
+        </div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <PapacetamolCanvas />
-        </div>
         <p
           style={{
             fontWeight: 600,
@@ -91,11 +82,11 @@ const Grid = () => {
         >
           6
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <PapacetamolCanvas />
+        </div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <SachaCanvas />
-        </div>
         <p
           style={{
             fontWeight: 600,
@@ -103,11 +94,11 @@ const Grid = () => {
         >
           7
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <SachaCanvas />
+        </div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <BhcCanvas />
-        </div>
         <p
           style={{
             fontWeight: 600,
@@ -115,54 +106,61 @@ const Grid = () => {
         >
           8
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <BhcCanvas />
+        </div>
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <FluxCanvas />
-        </div>
-        <p
+      <p
           style={{
             fontWeight: 600,
           }}
         >
           9
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <FluxCanvas />
+        </div>
+
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <HarvardCanvas />
-        </div>
-        <p
+      <p
           style={{
             fontWeight: 600,
           }}
         >
           10
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <HarvardCanvas />
+        </div>
+
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <ExperimentsCanvas />
-        </div>
-        <p
+      <p
           style={{
             fontWeight: 600,
           }}
         >
           11
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <ExperimentsCanvas />
+        </div>
+
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <div className="justify-self-center w-[25vw] h-full">
-          <IcchaCanvas />
-        </div>
-        <p
+      <p
           style={{
             fontWeight: 600,
           }}
         >
           12
         </p>
+        <div className="justify-self-center w-[25vw] h-full">
+          <IcchaCanvas />
+        </div>
+
       </div>
     </div>
   );

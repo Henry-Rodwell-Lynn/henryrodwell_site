@@ -25,7 +25,7 @@ const About = () => {
           Website Design being done by me 🖲️
         </p>
         <p className="hidden mt-5 mr-10 xl:block">
-          Is a graduate designer from Kingston University. He is someone who;
+          Is a designer who
           thinks design is (and should be) fun, relishes learning new skills,
           loves solving problems and enjoys working with emerging and exciting
           technologies. His work is current and focuses on evoking intrigue into
@@ -37,7 +37,7 @@ const About = () => {
               fontStyle: "oblique",
             }}
           >
-            ➡️ Website Design by Henry Rodwell-Lynn 🖲️
+            <br/>➡️ Website Design by Henry Rodwell-Lynn 🖲️
           </p>
         </p>
       </div>

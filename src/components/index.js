@@ -15,7 +15,6 @@ import {
 
 import {
   Stopple3D,
-  TickTock3D,
 } from './Work/3D_Models';
 
 import About from "./About";
@@ -38,6 +37,5 @@ export {
   ExperimentsCanvas,
   IcchaCanvas,
   Stopple3D,
-  TickTock3D,
   Banner
 };
