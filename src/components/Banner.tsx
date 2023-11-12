@@ -1,8 +1,18 @@
 import React from "react";
 
 const Banner = () => {
+  const openTabs = () => {
+    // URLs you want to open
+    const urls = ['https://instagram.com/henryrodwelllynn'];
+    
+    // Open each URL in a new tab
+    urls.forEach((url) => {
+      window.open(url, '_blank');
+    });
+  };
+
   return (
-    <div className="">
+    <div onClick={openTabs} className="">
       {/* <div className="fixed flex z-[-1] rotate-3 top-48 shadow-lg select-none">
         <div className="whitespace-nowrap ml-1 mr-1">
           <div className="flex gap-2 animate-rightToLeft bg-[#30c104] p-2 border-4 border-black border-l-0 shadow-lg text-black">
@@ -38,18 +48,18 @@ const Banner = () => {
                 fontWeight: 600,
               }}
             >
-              🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
-              CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS CURRENTLY UNDER
-              DEVELOPMENT 🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT
+              🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO 🚧 THIS SITE IS CURRENTLY UNDER
+              DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO 🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO 🚧 THIS SITE IS CURRENTLY UNDER
+              DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO
             </p>
             <p
               style={{
                 fontWeight: 600,
               }}
             >
-              🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS
-              CURRENTLY UNDER DEVELOPMENT 🚧 THIS SITE IS CURRENTLY UNDER
-              DEVELOPMENT 🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT
+              🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO 🚧 THIS SITE IS CURRENTLY UNDER
+              DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO 🚧 THIS SITE IS CURRENTLY UNDER DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO 🚧 THIS SITE IS CURRENTLY UNDER
+              DEVELOPMENT 🚧 CLICK HERE FOR MORE INFO
             </p>
           </div>
         </div>
