@@ -6,7 +6,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <CustomCursor />
-      <div className="hidden">
+      <div className="">
         <Banner />
       </div>
       <div className="relative z-10 bg-[#ffffff00] text-black grid grid-cols-1 h-full grid-rows-6">

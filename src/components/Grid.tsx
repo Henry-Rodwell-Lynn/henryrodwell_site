@@ -33,7 +33,7 @@ const Grid = () => {
       </div>
       <div className="w-full h-[calc(25vh-3.75rem)]">
         <p style={{ fontWeight: 600 }}>2</p>
-        <div className="justify-self-center w-[25vw] h-full">
+        <div className="justify-self-center w-[25vw] h-full p-5">
           <TickTockCanvas />
         </div>
       </div>
@@ -118,7 +118,7 @@ const Grid = () => {
         >
           9
         </p>
-        <div className="justify-self-center w-[25vw] h-full">
+        <div className="justify-self-center w-[25vw] h-full p-5">
           <FluxCanvas />
         </div>
 
