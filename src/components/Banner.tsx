@@ -3,7 +3,7 @@ import React from "react";
 const Banner = () => {
   const openTabs = () => {
     // URLs you want to open
-    const urls = ['https://instagram.com/henryrodwelllynn'];
+    const urls = ['https://instagram.com/studio.hrl'];
     
     // Open each URL in a new tab
     urls.forEach((url) => {

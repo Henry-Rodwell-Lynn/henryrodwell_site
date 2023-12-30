@@ -1,17 +1,15 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Grid, Banner } from "./components";
-import CustomCursor from "./CustomCursor";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <CustomCursor />
       <div className="">
         <Banner />
       </div>
       <div>
       <video
-        className="fixed top-0 left-0 w-screen h-screen object-cover z-0"
+        className="fixed top-0 left-0 w-screen h-screen object-cover z-0 pointer-events-none"
         autoPlay
         muted
         loop
