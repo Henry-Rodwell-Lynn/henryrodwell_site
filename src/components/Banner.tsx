@@ -40,7 +40,7 @@ const Banner = () => {
         </div>
       </div> */}
 
-      <div className="fixed flex z-[50] select-none translate-y-[calc(50vh-100%)] shadow-lg">
+      <div className="fixed flex z-[50] select-none translate-y-[calc(50vh-50%)] shadow-lg">
         <div className="whitespace-nowrap ml-1 mr-1">
           <div className="flex gap-1 animate-leftToRight bg-[#ffffff] hover:bg-yellow-400 border-2 border-black p-2">
             <p
