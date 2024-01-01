@@ -19,7 +19,7 @@ const Grid = () => {
 
       {/* Stopple */}
       <div className="w-full h-[calc(25vh-3.75rem)] cursor-move">
-        <p>1</p>
+        <p>1.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <StoppleCanvas />
         </div>
@@ -27,7 +27,7 @@ const Grid = () => {
 
       {/* TickTok */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>2</p>
+        <p>2.</p>
         <div className="justify-self-center w-[25vw] h-full p-5">
           <TickTockCanvas />
         </div>
@@ -35,7 +35,7 @@ const Grid = () => {
 
       {/* Dis Pub */}
       <div className="w-full h-[calc(25vh-3.75rem)] items-center">
-        <p>3</p>
+        <p>3.</p>
         <div className="w-[25vw] h-[calc(25vh-3.75rem)]">
           <DisPubCanvas />
         </div>
@@ -59,7 +59,7 @@ const Grid = () => {
 
       {/* TMC2 */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>6</p>
+        <p>6.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <TMC2Canvas />
         </div>
@@ -67,7 +67,7 @@ const Grid = () => {
 
       {/* SACHA */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>7</p>
+        <p>7.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <SachaCanvas />
         </div>
@@ -75,7 +75,7 @@ const Grid = () => {
 
       {/* BHC */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>8</p>
+        <p>8.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <BhcCanvas />
         </div>
@@ -83,7 +83,7 @@ const Grid = () => {
 
       {/* Flux */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>9</p>
+        <p>9.</p>
         <div className="justify-self-center w-[25vw] h-full p-5">
           <FluxCanvas />
         </div>
@@ -91,7 +91,7 @@ const Grid = () => {
 
       {/* Harvard */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>10</p>
+        <p>10.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <HarvardCanvas />
         </div>
@@ -99,7 +99,7 @@ const Grid = () => {
 
       {/* Experiments */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>11</p>
+        <p>11.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <ExperimentsCanvas />
         </div>
@@ -107,7 +107,7 @@ const Grid = () => {
 
       {/* ICCHA */}
       <div className="w-full h-[calc(25vh-3.75rem)]">
-        <p>12</p>
+        <p>12.</p>
         <div className="justify-self-center w-[25vw] h-full">
           <IcchaCanvas />
         </div>
