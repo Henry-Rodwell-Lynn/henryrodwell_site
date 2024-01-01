@@ -1,46 +1,37 @@
 import React from "react";
 import { useState } from "react";
 
-
 const About = () => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("henrywprodwell@gmail.com");
     setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 3000); 
+    setTimeout(() => setIsCopied(false), 3000);
   };
 
   return (
-    <div className="m-5 text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly h-[calc(25vh)]">
+    <div className="m-5 leading-4 text-s text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly h-[calc(25vh)]">
       <div className="md:col-span-3 xl:col-span-5">
-        <p
-          style={{
-            fontWeight: 600,
-          }}
-        >
-          HENRY RODWELL:
-        </p>
-        <p className="m-2 md:mt-5 md:m-0 md:mr-10 xl:hidden">
-          Website Design being done by me 🖲️
-        </p>
+        <p className="font-black">HENRY RODWELL:</p>
         <p className="hidden mt-5 mr-10 xl:block">
-          Is a designer who
-          thinks design is (and should be) fun, relishes learning new skills,
-          loves solving problems and enjoys working with emerging and exciting
-          technologies. His work is current and focuses on evoking intrigue into
-          the ever changing world around us, by coupling digital and emerging
-          practices with tried and tested traditional design techniques. Henry aims to solve mundane problems through unconventional,
-          fun and engaging design.
+          Is a designer who thinks design is (and should be) fun, relishes
+          learning new skills, loves solving problems and enjoys working with
+          emerging and exciting technologies. His work is current and focuses on
+          evoking intrigue into the ever changing world around us, by coupling
+          digital and emerging practices with tried and tested traditional
+          design techniques. Henry aims to solve mundane problems through
+          unconventional, fun and engaging design.
           <p>
-            <br/>➡️ Website Design by Henry Rodwell-Lynn 🖲️
+            <br />
+            ➡️ Website Design by Henry Rodwell-Lynn 🖲️
           </p>
         </p>
       </div>
       <div className="hidden xl:block">
         <p
           style={{
-            fontWeight: 600,
+            fontWeight: 900,
           }}
         >
           DESIGN:
@@ -123,11 +114,13 @@ const About = () => {
         {isCopied && (
           <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap animate-email">
             <p
-              className="text-center text-7xl" style={{
-                fontWeight: 600
+              className="text-center text-7xl"
+              style={{
+                fontWeight: 600,
               }}
             >
-              EMAIL COPPIED TO CLIPBOARD 📧 EMAIL COPPIED TO CLIPBOARD 📧 EMAIL COPPIED TO CLIPBOARD 📧
+              EMAIL COPPIED TO CLIPBOARD 📧 EMAIL COPPIED TO CLIPBOARD 📧 EMAIL
+              COPPIED TO CLIPBOARD 📧
             </p>
           </div>
         )}

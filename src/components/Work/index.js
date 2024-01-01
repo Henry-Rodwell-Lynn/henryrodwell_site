@@ -3,7 +3,7 @@ import TickTockCanvas from "./TickTock";
 import DisPubCanvas from "./DisPub";
 import CtqCanvas from "./Ctq";
 import DvomiCanvas from "./Dvomi";
-import PapacetamolCanvas from "./Papacetamol";
+import TMC2Canvas from "./TMC2";
 import SachaCanvas from "./Sacha";
 import BhcCanvas from "./Bhc";
 import FluxCanvas from "./Flux";
@@ -21,7 +21,7 @@ export {
   DisPubCanvas,
   CtqCanvas,
   DvomiCanvas,
-  PapacetamolCanvas,
+  TMC2Canvas,
   SachaCanvas,
   BhcCanvas,
   FluxCanvas,
