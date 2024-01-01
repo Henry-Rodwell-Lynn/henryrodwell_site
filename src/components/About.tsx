@@ -32,11 +32,7 @@ const About = () => {
           the ever changing world around us, by coupling digital and emerging
           practices with tried and tested traditional design techniques. Henry aims to solve mundane problems through unconventional,
           fun and engaging design.
-          <p
-            style={{
-              fontStyle: "oblique",
-            }}
-          >
+          <p>
             <br/>➡️ Website Design by Henry Rodwell-Lynn 🖲️
           </p>
         </p>

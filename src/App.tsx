@@ -4,9 +4,9 @@ import { About, Grid, Banner } from "./components";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="">
+      {/* <div className="">
         <Banner />
-      </div>
+      </div> */}
       <div>
       {/* <video
         className="fixed top-0 left-0 w-screen h-screen object-cover z-0"
