@@ -1,27 +1,14 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Grid, Banner } from "./components";
+import { About, Grid } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
-      {/* <div className="">
-        <Banner />
-      </div> */}
-      <div>
-      {/* <video
-        className="fixed top-0 left-0 w-screen h-screen object-cover z-0"
-        autoPlay
-        muted
-        loop
-      >
-        <source src={"/BG.mp4"} type="video/mp4" />
-      </video> */}
-      </div>
-      <div className="relative z-10 bg-[#ffffff00] text-black grid grid-cols-1 h-full grid-rows-6">
-        <div className="flex w-full">
+      <div className="flex flex-col h-screen max-h-screen">
+        <div className="flex m-5 flex-1">
           <Grid />
         </div>
-        <div className="">
+        <div className="flex m-5">
           <About />
         </div>
       </div>

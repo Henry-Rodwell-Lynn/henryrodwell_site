@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -11,7 +12,18 @@ const About = () => {
   };
 
   return (
-    <div className="m-5 leading-4 text-s text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly h-[calc(25vh)]">
+    <motion.div   
+
+    initial={{ y: 100, opacity: 0}}
+    animate={{ y: 0, opacity: 1}}
+    transition={{
+      duration: 0.8,
+      delayChildren: 0.3,
+      staggerChildren: 0.05,
+      ease: [0, 0.71, 0.2, 1.01],
+    }}
+    
+    className="leading-4 text-xs text-black md:grid md:grid-cols-12 md:gap4  md:justify-evenly md:place-content-evenly ">
       <div className="md:col-span-3 xl:col-span-5">
         <p className="font-black">HENRY RODWELL:</p>
         <p className="hidden mt-5 mr-10 xl:block">
@@ -86,7 +98,7 @@ const About = () => {
 
       <div className="md:col-span-1">
         <p style={{ fontWeight: 600 }}>CONTACT:</p>
-        <ul className="m-2 list-none md:mt-5 m-0">
+        <ul className="list-none md:mt-5">
           <li className="flex items-center">
             <button className="hover:underline" onClick={handleCopyEmail}>
               Email
@@ -94,7 +106,7 @@ const About = () => {
           </li>
           <li className="flex items-center">
             <a
-              href="https://www.instagram.com/henryrodwelllynn/"
+              href="https://www.instagram.com/studio.hrl/"
               target="_blank"
               className="hover:underline"
             >
@@ -125,7 +137,7 @@ const About = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

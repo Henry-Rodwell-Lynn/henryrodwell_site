@@ -16,6 +16,6 @@
       "noEmit": true,
       "jsx": "react-jsx"
     },
-    "include": ["src"],
+    "include": ["src", "public/3D_Models", "src/Data/data.tsta.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
   }
