@@ -17,6 +17,8 @@ import {
   IcchaCanvas,
 } from "./components/Work";
 
+import Showreel from "../public/BG.mp4"
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -75,8 +77,8 @@ const App = () => {
           </div>
         </Draggable>
       </div> */}
-      <video className="w-full h-full " autoPlay muted loop>
-        <source src={"../public/BG.mp4"} type="video/mp4" />
+      <video className="w-full h-full pointer-events-none" autoPlay muted loop>
+        <source src={Showreel} type="video/mp4" />
       </video>
     </BrowserRouter>
   );
