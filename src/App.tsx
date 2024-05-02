@@ -76,7 +76,7 @@ const App = () => {
         </Draggable>
       </div> */}
       <video className="w-full h-full " autoPlay muted loop>
-        <source src={"/public/BG.mp4"} type="video/mp4" />
+        <source src={"../public/BG.mp4"} type="video/mp4" />
       </video>
     </BrowserRouter>
   );
