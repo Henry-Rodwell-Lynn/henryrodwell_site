@@ -1,29 +1,78 @@
+import React, { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { About, Grid, Banner } from "./components";
+import Draggable from "react-draggable";
+import { Banner, About } from "./components";
+import {
+  StoppleCanvas,
+  TickTockCanvas,
+  DisPubCanvas,
+  CtqCanvas,
+  DvomiCanvas,
+  PapacetamolCanvas,
+  SachaCanvas,
+  BhcCanvas,
+  FluxCanvas,
+  HarvardCanvas,
+  ExperimentsCanvas,
+  IcchaCanvas,
+} from "./components/Work";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="">
-        <Banner />
-      </div>
-      <div>
-      <video
-        className="fixed top-0 left-0 w-screen h-screen object-cover z-0 pointer-events-none"
-        autoPlay
-        muted
-        loop
-      >
-        <source src={"/BG.mp4"} type="video/mp4" />
-      </video>
-      </div>
-      <div className="relative z-10 bg-[#ffffff00] text-black grid grid-cols-1 h-full grid-rows-6">
-        <div className="flex w-full hidden">
-          <Grid />
-        </div>
-        <div className="hidden">
-          <About />
-        </div>
+      <div className="flex flex-row">
+      <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-50">
+            <StoppleCanvas />
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <ExperimentsCanvas />
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <img
+              className="pointer-events-none"
+              src="/TT.png"
+              alt="Description of GIF"
+            />
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <DisPubCanvas />
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <DvomiCanvas />
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <img
+              className="pointer-events-none"
+              src="/FLUX_EXPERIMENT.gif"
+              alt="Description of GIF"
+            />
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <video className="w-full h-full rounded-xl" autoPlay muted loop>
+              <source src={"/public/TD Video 1.webm"} type="video/mp4" />
+            </video>
+          </div>
+        </Draggable>
+        <Draggable>
+          <div className="hover:cursor-grab active:cursor-grabbing w-[200px]">
+            <video className="w-full h-full " autoPlay muted loop>
+              <source src={"/public/Comp 1_1.mp4"} type="video/mp4" />
+            </video>
+          </div>
+        </Draggable>
       </div>
     </BrowserRouter>
   );

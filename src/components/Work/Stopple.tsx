@@ -20,12 +20,14 @@ const StoppleCanvas = () => {
           <OrbitControls 
             enablePan={false}
             enableZoom={false}
+            enableRotate={false}
             autoRotate
            />
           <Stopple3D />
         </Suspense>
         <Preload all />
       </Canvas>
+      
   );
 };
 

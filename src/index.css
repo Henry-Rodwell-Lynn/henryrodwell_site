@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 * {
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-style: ;
-  line-height: 120%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  font-weight:bold ;
 }
 
 body {
