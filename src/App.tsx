@@ -20,7 +20,8 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="flex flex-row">
+      <Banner />
+      {/* <div className="flex flex-row">
       <Draggable>
           <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-50">
             <StoppleCanvas />
@@ -73,7 +74,10 @@ const App = () => {
             </video>
           </div>
         </Draggable>
-      </div>
+      </div> */}
+      <video className="w-full h-full " autoPlay muted loop>
+        <source src={"/public/BG.mp4"} type="video/mp4" />
+      </video>
     </BrowserRouter>
   );
 };
