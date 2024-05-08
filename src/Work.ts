@@ -4,7 +4,7 @@ export const Work_Data = [
   {
     title: "Type Experiments",
     category: "vid",
-    source: "../public/MS.mp4",
+    source: "/MS.mp4",
   },
   {
     title: "Harvard D3",
