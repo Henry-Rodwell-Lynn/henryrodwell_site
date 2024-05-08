@@ -18,6 +18,27 @@ const App = () => {
   const workCss =
     "absolute hover:cursor-grab active:cursor-grabbing w-[200px] max-h-[200px]";
 
+
+    const [positions, setPositions] = useState<Position[]>([]);
+
+    interface Position {
+      x: number;
+      y: number;
+    }
+    
+    const getRandomPosition = (positions: Position[]): Position => {
+      let x: number, y: number;
+      do {
+        x = Math.random() * (window.innerWidth - 200); 
+        y = Math.random() * (window.innerHeight - 200); 
+      } while (positions.some(pos => Math.abs(pos.x - x) < 400 && Math.abs(pos.y - y) < 400));
+      
+      return { x, y };
+    };
+    
+    
+    
+
   return (
     <BrowserRouter>
       <div className="flex flex-row min-h-screen min-w-full justify-center items-center  border-red-500 absolute text-white text-xs">
@@ -53,7 +74,7 @@ const App = () => {
                 </a>
               </p>
               <br />
-              <div className="flex justify-center items-center hidden">
+              <div className="flex justify-center items-center ">
                 <label className="inline-flex items-center cursor-crosshair">
                   <input
                     type="checkbox"
@@ -78,11 +99,11 @@ const App = () => {
       >
         {Work_Data.map((item, i) => (
             <motion.div
-              initial={{ y: 10, opacity: 0, scale: 0.5 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.5, ...getRandomPosition(positions) }}
+              animate={showWork ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{
                 duration: 0.8,
-                delay: i * 0.05,
+                delay: i * 0.1,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
               key={i}
@@ -106,7 +127,7 @@ const App = () => {
             </motion.div>
         ))}
          <Draggable>
-          <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-40">
+          <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-40 top-[50vh]">
             <StoppleCanvas />
           </div>
         </Draggable>
