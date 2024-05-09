@@ -16,7 +16,7 @@ const App = () => {
   };
 
   const workCss =
-    "absolute hover:cursor-grab active:cursor-grabbing w-[200px] max-h-[200px]";
+    "absolute hover:cursor-grab active:cursor-grabbing w-[200px] h-[200px]";
 
 
     const [positions, setPositions] = useState<Position[]>([]);
@@ -127,7 +127,7 @@ const App = () => {
             </motion.div>
         ))}
          <Draggable>
-          <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-40 top-[50vh]">
+          <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-40 top-[50vh] absolute left-[300px]">
             <StoppleCanvas />
           </div>
         </Draggable>

@@ -13,6 +13,11 @@ export const Work_Data = [
   },
   {
     title: "Experiments",
+    category: "img",
+    source: "/P5js.png",
+  },
+  {
+    title: "Experiments",
     category: "vid",
     source: "/36dot.mp4",
   },
@@ -56,11 +61,11 @@ export const Work_Data = [
     category: "img",
     source: "/Mockup cards.png",
   },
-  {
-    title: "Flux",
-    category: "img",
-    source: "/FLUX 2.jpg",
-  },
+  // {
+  //   title: "Flux",
+  //   category: "img",
+  //   source: "/FLUX 2.jpg",
+  // },
   {
     title: "Harvard D3",
     category: "img",
@@ -70,5 +75,20 @@ export const Work_Data = [
     title: "Tick Tock",
     category: "img",
     source: "/pc4.png",
+  },
+  {
+    title: "TMC2",
+    category: "img",
+    source: "/ipad.png",
+  },
+  {
+    title: "Shader Tool Kit",
+    category: "img",
+    source: "/ShaderKit1.png",
+  },
+  {
+    title: "Lava Lamp",
+    category: "vid",
+    source: "/LL.mp4",
   },
 ];
