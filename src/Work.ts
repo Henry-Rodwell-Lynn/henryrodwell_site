@@ -29,7 +29,7 @@ export const Work_Data = [
   {
     title: "DVOMI",
     category: "img",
-    source: "//DVOMI.gif",
+    source: "/DVOMI.gif",
   },
   {
     title: "TMC2-Article",
