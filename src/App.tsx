@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Work_Data } from "./Work";
 import {PapacetamolCanvas, StoppleCanvas} from "./components/Work";
 
+
 const App = () => {
   const [isCopied, setIsCopied] = useState(false);
   const [showWork, setShowWork] = useState(false);
