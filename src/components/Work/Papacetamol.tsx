@@ -5,15 +5,15 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Papacetamol = () => {
-  const papacetamol = useGLTF("./logo-test/tezza.glb");
+  const papacetamol = useGLTF("./logo-test/logo-test.glb");
   const meshRef = useRef();
 
   useFrame(() => {
-    meshRef.current.rotation.y += 0.005;
+    meshRef.current.rotation.y += 0.000;
   });
 
   return (
-    <mesh ref={meshRef}>
+    <group ref={meshRef}>
       <hemisphereLight intensity={1} groundColor="black" />
       <pointLight intensity={1} />
       <spotLight
@@ -39,11 +39,11 @@ const Papacetamol = () => {
       />
       <primitive
         object={papacetamol.scene}
-        scale={2}
+        scale={5}
         position={[0, 0, 0]}
-        rotation={[0, 0, 0]}
+        rotation={[0, 1.5, 0]}
       />
-    </mesh>
+    </group>
   );
 };
 

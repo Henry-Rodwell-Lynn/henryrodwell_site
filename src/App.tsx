@@ -1,10 +1,11 @@
 import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
-import Draggable from "react-draggable";
 import { motion } from "framer-motion";
 import { Work_Data } from "./Work";
-import {PapacetamolCanvas, StoppleCanvas} from "./components/Work";
+import Draggable from "react-draggable";
 
+import LogoCanvas from "./components/Work/Logo";
+import StoppleCanvas from "./components/Work/Stopple";
 
 const App = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -19,33 +20,33 @@ const App = () => {
   const workCss =
     "absolute hover:cursor-grab active:cursor-grabbing w-[200px] h-[200px]";
 
+  const [positions, setPositions] = useState([]);
 
-    const [positions, setPositions] = useState<Position[]>([]);
+  interface Position {
+    x: number;
+    y: number;
+  }
 
-    interface Position {
-      x: number;
-      y: number;
-    }
-    
-    const getRandomPosition = (positions: Position[]): Position => {
-      let x: number, y: number;
-      do {
-        x = Math.random() * (window.innerWidth - 200); 
-        y = Math.random() * (window.innerHeight - 200); 
-      } while (positions.some(pos => Math.abs(pos.x - x) < 400 && Math.abs(pos.y - y) < 400));
-      
-      return { x, y };
-    };
-    
-    
-    
+  const getRandomPosition = (positions: Position[]): Position => {
+    let x: number, y: number;
+    do {
+      x = Math.random() * (window.innerWidth - 200);
+      y = Math.random() * (window.innerHeight - 200);
+    } while (
+      positions.some(
+        (pos) => Math.abs(pos.x - x) < 400 && Math.abs(pos.y - y) < 400
+      )
+    );
+
+    return { x, y };
+  };
 
   return (
     <BrowserRouter>
-      <div className="flex flex-row min-h-screen min-w-full justify-center items-center  border-red-500 absolute text-white text-xs">
+      <div className="flex flex-row min-h-screen min-w-full justify-center items-center absolute text-white text-xs">
         <div className="z-50 ">
-          <div className="h-[200px] w-[200px] hover:cursor-grab active:cursor-grabbing">
-            <PapacetamolCanvas />
+          <div className="h-[200px] w-[200px] ">
+            <LogoCanvas />
           </div>
           <div>
             <ul className="mt-4 mix-blend-difference">
@@ -99,35 +100,41 @@ const App = () => {
         }`}
       >
         {Work_Data.map((item, i) => (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5, ...getRandomPosition(positions) }}
-              animate={showWork ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-              transition={{
-                duration: 0.8,
-                delay: i * 0.1,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}
-              key={i}
-            >
-              {item.category === "vid" ? (
-                <Draggable>
-                  <div className={`${workCss}`}>
-                    <video autoPlay muted loop className="pointer-events-none">
-                      <source src={item.source} type="video/mp4" />
-                      {`${item.title}`}
-                    </video>
-                  </div>
-                </Draggable>
-              ) : (
-                <Draggable>
-                  <div className={`${workCss}`}>
-                    <img src={item.source} className="pointer-events-none" />
-                  </div>
-                </Draggable>
-              )}
-            </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.5,
+              ...getRandomPosition(positions),
+            }}
+            animate={
+              showWork ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+            }
+            transition={{
+              duration: 0.8,
+              delay: i * 0.1,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            key={i}
+          >
+            {item.category === "vid" ? (
+              <Draggable>
+                <div className={`${workCss}`}>
+                  <video autoPlay muted loop className="pointer-events-none">
+                    <source src={item.source} type="video/mp4" />
+                    {`${item.title}`}
+                  </video>
+                </div>
+              </Draggable>
+            ) : (
+              <Draggable>
+                <div className={`${workCss}`}>
+                  <img src={item.source} className="pointer-events-none" />
+                </div>
+              </Draggable>
+            )}
+          </motion.div>
         ))}
-         <Draggable>
+        <Draggable>
           <div className="hover:cursor-grab active:cursor-grabbing h-[200px] w-[200px] z-40 top-[50vh] absolute left-[300px]">
             <StoppleCanvas />
           </div>

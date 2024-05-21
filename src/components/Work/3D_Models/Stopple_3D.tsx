@@ -66,6 +66,6 @@ const Stopple3D = (props) => {
   );
 };
 
-useGLTF.preload("/3D2.glb");
+useGLTF.preload("./logo-test/Stopple.glb");
 
 export default Stopple3D;

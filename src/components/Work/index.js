@@ -10,9 +10,11 @@ import FluxCanvas from "./Flux";
 import HarvardCanvas from "./Harvard";
 import ExperimentsCanvas from "./Experiments";
 import IcchaCanvas from "./Iccha";
+import LogoCanvas from "./Logo";
 
 import {
   Stopple3D,
+  Logo
 } from './3D_Models';
 
 export {
@@ -29,4 +31,6 @@ export {
   ExperimentsCanvas,
   IcchaCanvas,
   Stopple3D,
+  Logo,
+  LogoCanvas
 };

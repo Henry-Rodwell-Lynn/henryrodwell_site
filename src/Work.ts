@@ -1,5 +1,3 @@
-import TickTock from "./components/Work/TickTock";
-
 export const Work_Data = [
   {
     title: "Type Experiments",
@@ -61,11 +59,6 @@ export const Work_Data = [
     category: "img",
     source: "/Mockup cards.png",
   },
-  // {
-  //   title: "Flux",
-  //   category: "img",
-  //   source: "/FLUX 2.jpg",
-  // },
   {
     title: "Harvard D3",
     category: "img",

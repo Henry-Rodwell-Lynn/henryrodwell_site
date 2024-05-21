@@ -11,10 +11,12 @@ import {
   HarvardCanvas,
   ExperimentsCanvas,
   IcchaCanvas,
+  LogoCanvas,
 } from "./Work";
 
 import {
   Stopple3D,
+  Logo
 } from './Work/3D_Models';
 
 import About from "./About";
@@ -37,5 +39,7 @@ export {
   ExperimentsCanvas,
   IcchaCanvas,
   Stopple3D,
-  Banner
+  Banner,
+  Logo,
+  LogoCanvas
 };
