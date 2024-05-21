@@ -63,7 +63,7 @@ const App = () => {
               </p>
               <br />
               <p className="hover:underline text-center">
-                <a href="https://instagram.com/studio.hrl" target="_blank">
+                <a href="https://instagram.com/_henryrodwell" target="_blank">
                   Instagram
                 </a>
               </p>
