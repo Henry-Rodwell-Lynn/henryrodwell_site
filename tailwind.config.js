@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      'test1': ['monument']
+      'mono': ['chivo-mono']
     },
     extend: {
       animation: {

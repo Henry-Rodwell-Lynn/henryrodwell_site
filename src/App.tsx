@@ -12,13 +12,21 @@ const App = () => {
   const [showWork, setShowWork] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("henrywprodwell@gmail.com");
+    navigator.clipboard.writeText("info@henryrodwell.com");
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 3000);
   };
 
-  const workCss =
-    "absolute hover:cursor-grab active:cursor-grabbing w-[200px] h-[200px]";
+  const workCss = `
+  absolute 
+  hover:cursor-grab 
+  active:cursor-grabbing 
+  w-[200px] 
+  h-[200px] 
+  flex 
+  justify-center 
+  items-center
+`;
 
   const [positions, setPositions] = useState([]);
 
@@ -27,52 +35,78 @@ const App = () => {
     y: number;
   }
 
-  const getRandomPosition = (positions: Position[]): Position => {
+  const getRandomPosition = (
+    positions: Position[],
+    elementWidth = 200,
+    elementHeight = 200,
+    margin = 10
+  ): Position => {
+    const maxAttempts = 1000;
+    let attempts = 1000;
+
+    const isOverlapping = (newPos: Position) => {
+      return positions.some((pos) => {
+        return (
+          newPos.x < pos.x + elementWidth + margin &&
+          newPos.x + elementWidth + margin > pos.x &&
+          newPos.y < pos.y + elementHeight + margin &&
+          newPos.y + elementHeight + margin > pos.y
+        );
+      });
+    };
+
     let x: number, y: number;
+
     do {
-      x = Math.random() * (window.innerWidth - 200);
-      y = Math.random() * (window.innerHeight - 200);
-    } while (
-      positions.some(
-        (pos) => Math.abs(pos.x - x) < 400 && Math.abs(pos.y - y) < 400
-      )
-    );
+      x = Math.random() * (window.innerWidth - elementWidth);
+      y = Math.random() * (window.innerHeight - elementHeight);
+      attempts++;
+    } while (isOverlapping({ x, y }) && attempts < maxAttempts);
+
+    if (attempts >= maxAttempts) {
+      console.warn(
+        "Could not find a non-overlapping position after multiple attempts"
+      );
+    }
 
     return { x, y };
   };
 
   return (
     <BrowserRouter>
-      <div className="flex flex-row min-h-screen min-w-full justify-center items-center absolute text-white text-xs">
+      <div className="flex flex-row min-h-screen min-w-full justify-center items-center absolute text-white text-sm">
         <div className="z-50 ">
           <div className="h-[200px] w-[200px] ">
             <LogoCanvas />
           </div>
           <div>
             <ul className="mt-4 mix-blend-difference">
-              <p className="text-center">Henry Rodwell Designs</p>
+              <p className="text-center text-sm">HENRY RODWELL </p>
+              <p className="text-center">
+                <a className="font-mono font-normal text-xs">site_v1.0</a>
+              </p>
               <br />
               <p
                 className="hover:underline text-center"
                 onClick={handleCopyEmail}
               >
-                info@henryrodwell.com
-              </p>
-              <p className="hover:underline text-center hidden">
-                <a href="">Portfolio</a>
+                {isCopied
+                  ? "EMAIL COPIED TO CLIPBOARD"
+                  : "INFO@HENRYRODWELL.COM"}
               </p>
               <br />
               <p className="hover:underline text-center">
                 <a href="https://instagram.com/_henryrodwell" target="_blank">
-                  Instagram
+                  INSTAGRAM
                 </a>
               </p>
+
               <p className="hover:underline text-center">
                 <a
                   href="https://www.are.na/henry-rodwell-lynn/channels"
                   target="_blank"
                 >
-                  Are.na
+                  ARE.NA
                 </a>
               </p>
               <br />
@@ -86,7 +120,9 @@ const App = () => {
                   />
                   <div className="relative w-7 h-4 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-black peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[1px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-black border border-white"></div>{" "}
                   {/* Added border class */}
-                  <span className="ms-3 text-xs">Let See!</span>
+                  <span className="ms-3 font-mono font-normal text-xs">
+                    ( Lets See! )
+                  </span>
                 </label>
               </div>
             </ul>
@@ -128,7 +164,10 @@ const App = () => {
             ) : (
               <Draggable>
                 <div className={`${workCss}`}>
-                  <img src={item.source} className="pointer-events-none" />
+                  <img
+                    src={item.source}
+                    className="pointer-events-none object-contain w-full h-full"
+                  />
                 </div>
               </Draggable>
             )}

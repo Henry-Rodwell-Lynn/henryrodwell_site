@@ -1,5 +1,10 @@
 export const Work_Data = [
   {
+    title: "Tick Tock",
+    category: "img",
+    source: "/TTW.jpg",
+  },
+  {
     title: "Type Experiments",
     category: "vid",
     source: "/MS.mp4",
@@ -83,5 +88,30 @@ export const Work_Data = [
     title: "Lava Lamp",
     category: "vid",
     source: "/LL.mp4",
+  },
+  {
+    title: "Freelance",
+    category: "img",
+    source: "/poster.png",
+  },
+  {
+    title: "e+a",
+    category: "img",
+    source: "/eanda.jpg",
+  },
+  {
+    title: "ctq",
+    category: "img",
+    source: "/ctq.png",
+  },
+  {
+    title: "TMC2",
+    category: "img",
+    source: "/TMC2 B.jpg",
+  },
+  {
+    title: "DisPub",
+    category: "img",
+    source: "/dispub.png",
   },
 ];

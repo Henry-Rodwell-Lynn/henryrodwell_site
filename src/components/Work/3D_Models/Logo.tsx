@@ -12,7 +12,7 @@ const Logo = (props) => {
     const handleMouseMove = (event) => {
       const x = (event.clientX / window.innerWidth) * 2 - 1;
       const y = ((event.clientY / window.innerHeight) * 2 - 1); // Note the negative sign here
-      group.current.rotation.set(y / 3, x / 3, 0);
+      group.current.rotation.set(y / 2.5, x / 2.5, 0);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
