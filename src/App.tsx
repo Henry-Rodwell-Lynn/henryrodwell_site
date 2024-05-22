@@ -21,8 +21,8 @@ const App = () => {
   absolute 
   hover:cursor-grab 
   active:cursor-grabbing 
-  w-[200px] 
-  h-[200px] 
+  w-[300px] 
+  h-[250px] 
   flex 
   justify-center 
   items-center
@@ -75,7 +75,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="flex flex-row min-h-screen min-w-full justify-center items-center absolute text-white text-sm">
-        <div className="z-50 ">
+        <div className="z-50 bg-blend-difference mix-blend-difference">
           <div className="h-[200px] w-[200px] ">
             <LogoCanvas />
           </div>
@@ -155,7 +155,7 @@ const App = () => {
             {item.category === "vid" ? (
               <Draggable>
                 <div className={`${workCss}`}>
-                  <video autoPlay muted loop className="pointer-events-none">
+                  <video autoPlay muted loop className="pointer-events-none object-contain w-full h-full">
                     <source src={item.source} type="video/mp4" />
                     {`${item.title}`}
                   </video>

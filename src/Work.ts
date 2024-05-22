@@ -1,14 +1,15 @@
 export const Work_Data = [
   {
-    title: "Tick Tock",
-    category: "img",
-    source: "/TTW.jpg",
-  },
-  {
     title: "Type Experiments",
     category: "vid",
     source: "/MS.mp4",
   },
+  {
+    title: "Tick Tock",
+    category: "img",
+    source: "/TTW.jpg",
+  },
+
   {
     title: "Harvard D3",
     category: "vid",
