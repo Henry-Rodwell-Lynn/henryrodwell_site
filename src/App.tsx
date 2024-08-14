@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Work_Data } from "./Work";
 import Draggable from "react-draggable";
@@ -10,6 +10,8 @@ import StoppleCanvas from "./components/Work/Stopple";
 const App = () => {
   const [isCopied, setIsCopied] = useState(false);
   const [showWork, setShowWork] = useState(false);
+  const [mediaLoaded, setMediaLoaded] = useState({});
+  const [allMediaLoaded, setAllMediaLoaded] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("info@henryrodwell.com");
@@ -18,15 +20,15 @@ const App = () => {
   };
 
   const workCss = `
-  absolute 
-  hover:cursor-grab 
-  active:cursor-grabbing 
-  w-[300px] 
-  h-[250px] 
-  flex 
-  justify-center 
-  items-center
-`;
+    absolute 
+    hover:cursor-grab 
+    active:cursor-grabbing 
+    w-[25rem] 
+    h-[20rem] 
+    flex 
+    justify-center 
+    items-center
+  `;
 
   const [positions, setPositions] = useState([]);
 
@@ -72,11 +74,21 @@ const App = () => {
     return { x, y };
   };
 
+  // Function to update the media loaded state
+  const handleMediaLoad = (index) => {
+    setMediaLoaded((prev) => ({ ...prev, [index]: true }));
+  };
+
+  // Determine if all media are loaded
+  useEffect(() => {
+    setAllMediaLoaded(Object.values(mediaLoaded).length === Work_Data.length && Object.values(mediaLoaded).every(Boolean));
+  }, [mediaLoaded]);
+
   return (
     <BrowserRouter>
       <div className="flex flex-row min-h-screen min-w-full justify-center items-center absolute text-white text-sm">
         <div className="z-50 bg-blend-difference mix-blend-difference">
-          <div className="h-[200px] w-[200px] ">
+          <div className="h-[200px] w-[200px]">
             <LogoCanvas />
           </div>
           <div>
@@ -110,7 +122,7 @@ const App = () => {
                 </a>
               </p>
               <br />
-              <div className="flex justify-center items-center ">
+              <div className="flex justify-center items-center">
                 <label className="inline-flex items-center cursor-crosshair">
                   <input
                     type="checkbox"
@@ -118,8 +130,7 @@ const App = () => {
                     className="sr-only peer"
                     onChange={() => setShowWork(!showWork)}
                   />
-                  <div className="relative w-7 h-4 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-black peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[1px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-black border border-white"></div>{" "}
-                  {/* Added border class */}
+                  <div className="relative w-7 h-4 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-black peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[1px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-black border border-white"></div>
                   <span className="ms-3 font-mono font-normal text-xs">
                     ( Lets See! )
                   </span>
@@ -130,10 +141,11 @@ const App = () => {
         </div>
       </div>
 
-      <div
-        className={`flex flex-row min-h-screen min-w-full ${
-          showWork ? "" : "hidden"
-        }`}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={showWork && allMediaLoaded ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-row min-h-screen min-w-full"
       >
         {Work_Data.map((item, i) => (
           <motion.div
@@ -151,11 +163,18 @@ const App = () => {
               ease: [0, 0.71, 0.2, 1.01],
             }}
             key={i}
+            onLoad={() => handleMediaLoad(i)}
           >
             {item.category === "vid" ? (
               <Draggable>
                 <div className={`${workCss}`}>
-                  <video autoPlay muted loop className="pointer-events-none object-contain w-full h-full">
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    className="pointer-events-none object-contain w-full h-full"
+                    onCanPlayThrough={() => handleMediaLoad(i)}
+                  >
                     <source src={item.source} type="video/mp4" />
                     {`${item.title}`}
                   </video>
@@ -167,6 +186,7 @@ const App = () => {
                   <img
                     src={item.source}
                     className="pointer-events-none object-contain w-full h-full"
+                    onLoad={() => handleMediaLoad(i)}
                   />
                 </div>
               </Draggable>
@@ -178,7 +198,7 @@ const App = () => {
             <StoppleCanvas />
           </div>
         </Draggable>
-      </div>
+      </motion.div>
     </BrowserRouter>
   );
 };
