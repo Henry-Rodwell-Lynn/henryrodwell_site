@@ -95,7 +95,7 @@ const App = () => {
             <ul className="mt-4 mix-blend-difference">
               <p className="text-center text-sm">HENRY RODWELL </p>
               <p className="text-center">
-                <a className="font-mono font-normal text-xs">site_v1.0</a>
+                <a className="font-mono font-normal text-xs">site_v1.1</a>
               </p>
               <br />
               <p
