@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import LogoCanvas from "./components/Work/Logo";
 
 const App = () => {
@@ -7,24 +7,22 @@ const App = () => {
   const [currentTime, setCurrentTime] = useState("");
   const [browserType, setBrowserType] = useState("");
   const [deviceType, setDeviceType] = useState("");
-  const [location, setLocation] = useState("Unknown");
   const [timeZone, setTimeZone] = useState("");
   const [screenResolution, setScreenResolution] = useState("");
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   // Copy email handler
-  const handleCopyEmail = () => {
+  const handleCopyEmail = useCallback(() => {
     navigator.clipboard.writeText("info@henryrodwell.com");
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 3000);
-  };
+  }, []);
 
   // Fetch current time with seconds
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const formattedTime = now.toLocaleTimeString();
-      setCurrentTime(formattedTime);
+      setCurrentTime(now.toLocaleTimeString());
     };
 
     updateTime();
@@ -51,7 +49,7 @@ const App = () => {
       else setDeviceType("Desktop");
 
       // Check if the device is a touchscreen
-      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+      setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
     };
 
     checkDeviceTypeAndTouch();
@@ -70,25 +68,15 @@ const App = () => {
     return () => window.removeEventListener("resize", updateResolution);
   }, []);
 
-  // Fetch location using Geolocation API
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const { latitude, longitude } = position.coords;
-        setLocation(`Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}`);
-      });
-    }
-  }, []);
-
   // Get the user's time zone
   useEffect(() => {
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    setTimeZone(timeZone);
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    setTimeZone(userTimeZone);
   }, []);
 
-  // Direct DOM updates using requestAnimationFrame for smoother crosshair and coordinates
+  // Handle crosshair rendering using requestAnimationFrame
   useEffect(() => {
-    if (isTouchDevice || window.innerWidth <= 1024) return; // Skip crosshair rendering for touch devices or smaller screens
+    if (isTouchDevice || window.innerWidth <= 1024) return;
 
     const crosshairX = document.createElement("div");
     const crosshairY = document.createElement("div");
@@ -118,7 +106,7 @@ const App = () => {
     document.body.appendChild(crosshairY);
     document.body.appendChild(coordDisplay);
 
-    const updateCrosshair = (e: { clientX: any; clientY: any; }) => {
+    const updateCrosshair = (e) => {
       const x = e.clientX;
       const y = e.clientY;
 
@@ -130,7 +118,7 @@ const App = () => {
       coordDisplay.textContent = `(x: ${x}, y: ${y})`;
     };
 
-    const handleMouseMove = (e: any) => {
+    const handleMouseMove = (e) => {
       requestAnimationFrame(() => updateCrosshair(e));
     };
 
@@ -164,8 +152,16 @@ const App = () => {
             </a>
           </p>
           <p className="hover:underline">
-            <a href="https://instagram.com/_henryrodwell" target="_blank">
+            <a href="https://www.instagram.com/experiments.hrl/" target="_blank">
               EXPERIMENTS
+            </a>
+          </p>
+          <p className="hover:underline">
+            <a
+              href="https://www.are.na/henry-rodwell-lynn/channels"
+              target="_blank"
+            >
+              GITHUB
             </a>
           </p>
           <p className="hover:underline">
@@ -176,6 +172,7 @@ const App = () => {
               ARE.NA
             </a>
           </p>
+
           <br />
         </ul>
       </div>
@@ -188,7 +185,7 @@ const App = () => {
         </div>
       </div>
 
-      {/* Information in the Bottom Right Corner */}
+
       <div className="bottom-0 absolute m-3 text-gray-400 text-xs">
         <ul className="-space-y-1.5">
           <p>

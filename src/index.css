@@ -5,6 +5,7 @@
 * {
   font-family: 'TeXGyreHerosCondensed', sans-serif;
   font-weight: bold;
+  cursor: none;
 }
 
 body {
@@ -28,4 +29,6 @@ ul li:before {
 .fade-effect.fade-out {
   opacity: 0;
 }
+
+
 
