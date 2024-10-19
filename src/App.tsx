@@ -158,7 +158,7 @@ const App = () => {
           </p>
           <p className="hover:underline">
             <a
-              href="https://www.are.na/henry-rodwell-lynn/channels"
+              href="https://github.com/Henry-Rodwell-Lynn"
               target="_blank"
             >
               GITHUB
