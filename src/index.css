@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 * {
-  font-family: 'TeXGyreHerosCondensed', sans-serif;
-  font-weight: bold;
+  font-family: 'neue-haas-grotesk-text', sans-serif;
+  font-weight: 600;
   cursor: none;
 }
 
